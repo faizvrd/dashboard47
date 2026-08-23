@@ -4307,23 +4307,23 @@
                 aoa.push(["PO Tracking ID", "No PO", "Package", "Item Description", "Vendor", "Qty", "UoM", "PO Date", "Required Delivery", "Forecast Delivery", "Actual Delivery", "Status", "Delay (Days)", "Remarks"]),
                 m.poRows.forEach(t => aoa.push(t)),
                 aoa.push([]),
-                aoa.push(["2. MILESTONE TRACKING"]),
+                /*aoa.push(["2. MILESTONE TRACKING"]),
                 aoa.push(["Milestone ID", "PO No", "Milestone", "Planned Date", "Actual Date", "Completion (%)", "Status"]),
-                m.milestoneRows.forEach(t => aoa.push(t)),
+                m.milestoneRows.forEach(t => aoa.push(t)),*/
                 aoa.push([]),
-                aoa.push(["3. FAT & INSPECTION"]),
+                aoa.push(["2. FAT & INSPECTION"]),
                 aoa.push(["FAT No", "Item / Equipment", "Vendor", "FAT Date", "Location", "Inspector", "Status"]),
                 m.fatRows.forEach(t => aoa.push(t)),
                 aoa.push([]),
-                aoa.push(["4. SHIPMENT TRACKING"]),
+                aoa.push(["3. SHIPMENT TRACKING"]),
                 aoa.push(["Shipment No", "Item / Description", "Mode", "ETD", "ETA", "POL", "POD", "Current Location", "Status"]),
                 m.shipRows.forEach(t => aoa.push(t)),
                 aoa.push([]),
-                aoa.push(["5. PROCUREMENT SUMMARY"]),
+                aoa.push(["4. PROCUREMENT SUMMARY"]),
                 aoa.push(["Description", "Total"]),
                 m.summaryRows.forEach(t => aoa.push(t)),
                 aoa.push([]),
-                aoa.push(["6. ACTION LIST"]),
+                aoa.push(["5. ACTION LIST"]),
                 aoa.push(["Action ID", "Item", "Issue / Action", "PIC / Vendor", "Due Date", "Status"]),
                 m.actionRows.forEach(t => aoa.push(t));
                 const ws = XLSX.utils.aoa_to_sheet(aoa);
@@ -4452,11 +4452,11 @@
                 }
                 ;
                 addSection("1. PURCHASE ORDER TRACKING", ["PO Tracking ID", "No PO", "Package", "Item Description", "Vendor", "Qty", "UoM", "PO Date", "Req. Delivery", "Fcst Delivery", "Actual Delivery", "Status", "Delay", "Remarks"], m.poRows),
-                addSection("2. MILESTONE TRACKING", ["Milestone ID", "PO No", "Milestone", "Planned Date", "Actual Date", "Completion", "Status"], m.milestoneRows),
-                addSection("3. FAT & INSPECTION", ["FAT No", "Item / Equipment", "Vendor", "FAT Date", "Location", "Inspector", "Status"], m.fatRows),
-                addSection("4. SHIPMENT TRACKING", ["Shipment No", "Item / Description", "Mode", "ETD", "ETA", "POL", "POD", "Current Location", "Status"], m.shipRows),
-                addSection("5. PROCUREMENT SUMMARY", ["Description", "Total"], m.summaryRows),
-                addSection("6. ACTION LIST", ["Action ID", "Item", "Issue / Action", "PIC / Vendor", "Due Date", "Status"], m.actionRows);
+                /*addSection("2. MILESTONE TRACKING", ["Milestone ID", "PO No", "Milestone", "Planned Date", "Actual Date", "Completion", "Status"], m.milestoneRows),*/
+                addSection("2. FAT & INSPECTION", ["FAT No", "Item / Equipment", "Vendor", "FAT Date", "Location", "Inspector", "Status"], m.fatRows),
+                addSection("3. SHIPMENT TRACKING", ["Shipment No", "Item / Description", "Mode", "ETD", "ETA", "POL", "POD", "Current Location", "Status"], m.shipRows),
+                addSection("4. PROCUREMENT SUMMARY", ["Description", "Total"], m.summaryRows),
+                addSection("5. ACTION LIST", ["Action ID", "Item", "Issue / Action", "PIC / Vendor", "Due Date", "Status"], m.actionRows);
 
                 // ---- Signature block: Expeditor / Manager Procurement / Project Manager ----
                 if (y > doc.internal.pageSize.getHeight() - 50)
