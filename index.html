@@ -4375,7 +4375,7 @@
                 showToast("Excel report berhasil dibuat")
             }
             function generateDocCredential(now) {
-                return "CRD-" + now.getFullYear() + pad2(now.getMonth() + 1) + pad2(now.getDate()) + "-" + pad2(now.getHours()) + pad2(now.getMinutes()) + pad2(now.getSeconds()) + "-" + Math.random().toString(36).substring(2, 7).toUpperCase()
+                return "ESRARO-" + now.getFullYear() + pad2(now.getMonth() + 1) + pad2(now.getDate()) + "-" + pad2(now.getHours()) + pad2(now.getMinutes()) + pad2(now.getSeconds()) + "-" + Math.random().toString(36).substring(2, 7).toUpperCase()
             }
             function exportReportPDF() {
                 if (!reportPOData.length && !reportFATData.length)
@@ -4389,7 +4389,7 @@
                 doc.setFontSize(7),
                 doc.setFont("helvetica", "normal"),
                 doc.setTextColor(120),
-                doc.text("Doc Credential: " + docCredential, margin, 7),
+                doc.text("Report ID: " + docCredential, margin, 7),
                 doc.setTextColor(0),
                 doc.setFont("helvetica", "bold"),
                 doc.setFontSize(16),
